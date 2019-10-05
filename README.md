@@ -2,13 +2,12 @@
 
 # DB設計
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|VARCHAR(255)|null: false|
-|Email|VARCHAR(255)|null: false|
-|user_group_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
+|Email|string|null: false|
 
 ### Association
 
@@ -17,13 +16,11 @@
 - has_many :massages
 
 
-## groupテーブル
+## groupsテーブル
 
 Column|Type|Options|
 |------|----|-------|
-|group_name|VARCHAR(255)|null: false|
-|user_group_id|integer|null: false, foreign_key: true|
-|massage_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 
@@ -46,7 +43,7 @@ olumn|Type|Options|
 
 
 
-## massageグループ
+## massagesグループ
 olumn|Type|Options|
 |------|----|-------|
 |body|text| |
