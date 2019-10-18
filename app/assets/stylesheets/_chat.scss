@@ -43,12 +43,11 @@
     overflow: scroll;
     box-sizing: border-box;
     .message {
-      height: 80px;
-      &__upper-info {
+      padding: 0 0 40px;
+      .upper-info {
         display: flex;
         height: 26px;
         margin-bottom: 10px;
-
         &__talker {
           color: #434a54;
           font-size: 16px;
@@ -82,25 +81,26 @@
         width: 100%;
         display: flex;
         background-color: #ffffff;
-        position: relative;
         &__text {
           width: 100%;
           height: 50px;
           padding: 0 40px 0 10px;
           border-style: none;
+          &__image {
+            font-size: 1.3rem;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+          }
         }
-        &__image {
-          color: black;
-          font-size: 1.3rem;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          position: absolute;
-          &__file {
-            display: none;
-          }   
+        &__label {
+          position: relative;
         }
       }
+      .file {
+        display: none;
+      }   
       .submit-btn {
         width: 100px;
         height: 50px;
@@ -111,6 +111,7 @@
         color: white;
         font-weight: lighter;
         text-align: center;
+        cursor: pointer;
       }
     }
   }
